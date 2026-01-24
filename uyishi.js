@@ -1,22 +1,22 @@
-function juftVatoqson(son){
-  if(son % 2 == 0){
-    console.log("Juft son");
-  } else {
-    console.log("Toq son");
-  }
-}
-juftVatoqson(2);
-juftVatoqson(5);
+let Prices = [150, 80, 200, 50, 120];
+let Produkt = Prices.find(p => p < 100);
+console.log(Produkt);
 
-function EngKattasi(a,b,c) {
-let maksimum = a;
- if (b > maksimum) {
-  maksimum = b;
- }
-if (c > maksimum) {
-  maksimum = c;
-}
-console.log ("Eng kotta son",maksimum)
-}
-EngKattasi(3,7,9);
-EngKattasi(8,3,5);
+let Scores = [70, 85, 90, 95, 80];
+let natijaa = Scores.find(s => s >= 90);
+console.log(natijaa);
+
+let Fruits = ["olma", "banan", "bpelsin", "shaftoli"];
+let mevalarr = [];
+Fruits.forEach(f => {
+  mevalarr.push(f[0].toUpperCase() + f.slice(1));
+});
+console.log(mevalarr);
+
+let shaharlar = ["Toshkent", "Samarqand", "Buxoro", "Xiva", "Namangan", "Andijon"];
+let ohirii = shaharlar.slice(-3);
+console.log(ohirii);
+
+let fanlar2 = ["Ingliz tili", "Tarix", "Matematika", "Fizika", "Kimyo"];
+fanlar2.splice(2, 2, "Dasturlash");
+console.log(fanlar2);
