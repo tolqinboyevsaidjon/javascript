@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <title>DOM</title>
+</head>
+<body>
+
+<h1 id="sarlavha">Eski Sarlavha</h1>
+
+<p class="matn">Yana bir paragraf.</p>
+<p class="matn">Bu ochiriladigan paragraf.</p>
+<p class="matn">Va yana bir paragraf.</p>
+
+<button id="myButton">Meni bosing</button>
+
+<script>
+  const sarlavha = document.getElementById("sarlavha");
+  sarlavha.textContent = "Yangi Sarlavha";
+
+  const img = document.createElement("img");
+  img.src = "https://www.bing.com/images/search?view=detailV2&ccid=KI1GNaoy&id=ACB4BCC7C7DEA0FCA11C95DA8E8A4662C3B22CD5&thid=OIP.KI1GNaoySVNMDas6O4jFIQHaEK&mediaurl=https%3a%2f%2fcarwow-de-wp-0.imgix.net%2fBMW-M5-siebte-Generation.jpg&cdnurl=https%3a%2f%2fth.bing.com%2fth%2fid%2fR.288d4635aa3249534c0dab3a3b88c521%3frik%3d1Syyw2JGio7alQ%26pid%3dImgRaw%26r%3d0&exph=720&expw=1280&q=bmw&FORM=IRPRST&ck=0040BC8515BBE5C805147B0552EEAAF7&selectedIndex=0&itb=0";
+  img.alt = "Yangi rasm";
+  document.body.appendChild(img);
+
+  const matnlar = document.querySelectorAll(".matn");
+  matnlar[1].remove();
+
+  const button = document.getElementById("myButton");
+  button.addEventListener("click", () => {
+    console.log("Tugma bosildi!");
+  });
+</script>
+
+</body>
+</html>
