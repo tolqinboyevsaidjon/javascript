@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <title>Oquvchi tanlash</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #111;
+            color: #00ff88;
+            text-align: center;
+            padding-top: 100px;
+        }
+        button {
+            padding: 12px 25px;
+            font-size: 18px;
+            cursor: pointer;
+            border: none;
+            border-radius: 8px;
+            background: #00ff88;
+            color: #000;
+        }
+        #natija {
+            margin-top: 30px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Tasodifiy oquvchi tanlash</h1>
+    <button onclick="tanla()">Tanlash</button>
+
+    <div id="natija"></div>
+
+    <script>
+        const oquvchilar = [
+            "Sh.Sayidazim",
+            "K.Maqsad",
+            "Y.Uluğbek",
+            "T.Saidjon",
+            "T.Asilhan",
+            "A.Sabrina",
+            "Ziyodshox"
+        ];
+
+        function tanla() {
+            const randomIndex = Math.floor(Math.random() * oquvchilar.length);
+            document.getElementById("natija").innerText =
+                "Tanlangan o‘quvchi: " + oquvchilar[randomIndex];
+        }
+    </script>
+
+</body>
+</html>
